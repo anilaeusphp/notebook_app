@@ -1,0 +1,14 @@
+<h1>Notes</h1>
+
+<%= link_to "Create a Note", new_note_path %>
+
+<br />
+<br />
+
+<% @notes.each do |note| %>
+    <%= link_to note.title, note %>
+    <%= note.content %>
+    <%= button_to "Delete", note, method: :delete %>
+    <br />
+<% end %>
+
